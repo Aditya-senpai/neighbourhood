@@ -17,7 +17,7 @@ exports.handler = async (event, context) => {
       max_tokens: 50,
     }),
   });
-
+// ygjrssyxnj
   const data = await response.json();
 
   console.log("OpenAI API response:", data); // 👈 Helps debug in Netlify logs
