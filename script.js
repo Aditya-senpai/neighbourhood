@@ -51,7 +51,7 @@ function toggleDone(index) {
   renderTasks();
 }
 
-// 🧠 NEW: Fetch AI Tip from Netlify Function
+//  NEW: Fetch AI Tip from Netlify Function
 async function getTip(index) {
   const task = tasks[index];
   const response = await fetch('/.netlify/functions/tip', {
