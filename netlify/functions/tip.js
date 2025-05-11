@@ -1,10 +1,7 @@
 exports.handler = async (event, context) => {
   const fetch = (await import('node-fetch')).default;
-
-  // Get your OpenAI API key from environment variables
   const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-  // Call the OpenAI Chat Completion API
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: {
@@ -23,7 +20,8 @@ exports.handler = async (event, context) => {
 
   const data = await response.json();
 
-  // Extract the response text from OpenAI
+  console.log("OpenAI API response:", data); // 👈 Helps debug in Netlify logs
+
   const tip = data.choices?.[0]?.message?.content || 'No tip available.';
 
   return {
