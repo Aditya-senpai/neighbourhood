@@ -15,12 +15,16 @@ function renderTasks() {
     const li = document.createElement("li");
     li.className = task.done ? "done" : "";
 
+    const tip = task.tip ? `<p class="tip">💡 ${task.tip}</p>` : "";
+
     li.innerHTML = `
       <span>${task.text} <small>(${task.category})</small></span>
       <div>
         <button onclick="toggleDone(${index})">✔️</button>
         <button onclick="deleteTask(${index})">🗑️</button>
+        <button onclick="getTip(${index})">💡</button>
       </div>
+      ${tip}
     `;
     taskList.appendChild(li);
   });
@@ -45,6 +49,24 @@ function deleteTask(index) {
 function toggleDone(index) {
   tasks[index].done = !tasks[index].done;
   renderTasks();
+}
+
+// 🧠 NEW: Fetch AI Tip from Netlify Function
+async function getTip(index) {
+  const task = tasks[index];
+  const response = await fetch('/.netlify/functions/tip', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ task: task.text })
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    tasks[index].tip = data.tip;
+    renderTasks();
+  } else {
+    alert('❌ Failed to get AI tip.');
+  }
 }
 
 taskForm.addEventListener("submit", addTask);
