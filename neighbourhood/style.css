@@ -1,38 +1,45 @@
 body {
   font-family: sans-serif;
-  background-color: #f5f5f5;
+  background-color: rgb(163, 229, 231);
+ 
   margin: 0;
-  padding: 20px;
+  padding: 50px;
 }
 
 .app {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0;
+ background: linear-gradient(#219abe, #34cfba);
+  padding: 40px;
+  border-radius: 52px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.451);
 }
 
 h1 {
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 20;
+  font-style: normal;
+  
 }
 
 form {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 30px;
+  margin-bottom: 30px;
+  
 }
 
 input, select, button {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  
+  padding: 11px;
+  border-radius: 12px;
+  border: 1px solid white;
 }
 
 button {
-  background-color: #007bff;
-  color: white;
+  background-color: #ccffcc;
+  color: black;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -45,7 +52,7 @@ ul {
   list-style: none;
   padding: 0;
 }
-
+ 
 li {
   display: flex;
   justify-content: space-between;
