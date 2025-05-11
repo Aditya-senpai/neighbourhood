@@ -1,0 +1,23 @@
+{
+  "name": "neighbourhood",
+  "version": "1.0.0",
+  "description": "so i havechanged my readme to avoid conflicts\r be happy",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aditya-senpai/neighbourhood.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aditya-senpai/neighbourhood/issues"
+  },
+  "homepage": "https://github.com/Aditya-senpai/neighbourhood#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
