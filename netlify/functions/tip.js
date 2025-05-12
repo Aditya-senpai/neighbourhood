@@ -1,32 +1,33 @@
-exports.handler = async (event, context) => {
-  const fetch = (await import('node-fetch')).default;
-  const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const fetch = require("node-fetch");
 
-  const response = await fetch('https://api.openai.com/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      "Authorization": `Bearer ${process.env.HUGGINGFACE_API_KEY}`,
+exports.handler = async function (event, context) {
+  try {
+    const response = await fetch("https://api-inference.huggingface.co/models/google/flan-t5-small", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${process.env.HUGGINGFACE_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ inputs: "Give me one helpful productivity tip." })
+    });
 
-    },
-    body: JSON.stringify({
-      model: 'gpt-3.5-turbo',
-      messages: [
-        { role: 'system', content: 'You are a helpful assistant that gives short study tips.' },
-        { role: 'user', content: 'Give me one study tip.' },
-      ],
-      max_tokens: 50,
-    }),
-  });
-// ygjrssyxnj
-  const data = await response.json();
+    const data = await response.json();
 
-  console.log("OpenAI API response:", data); // 👈 Helps debug in Netlify logs
-
-  const tip = data.choices?.[0]?.message?.content || 'No tip available.';
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ tip }),
-  };
+    if (data && Array.isArray(data) && data[0]?.generated_text) {
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ tip: data[0].generated_text })
+      };
+    } else {
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ tip: "No tip available." })
+      };
+    }
+  } catch (err) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ tip: "Error: " + err.message })
+    };
+  }
 };
