@@ -1,6 +1,7 @@
-const fetch = require("node-fetch");
-
 exports.handler = async function (event, context) {
+  // Dynamically import node-fetch to handle ES Module
+  const fetch = (await import('node-fetch')).default;
+
   try {
     const response = await fetch("https://api-inference.huggingface.co/models/google/flan-t5-small", {
       method: "POST",
