@@ -1,5 +1,4 @@
 exports.handler = async function (event, context) {
-  // Dynamically import node-fetch to handle ES Module
   const fetch = (await import('node-fetch')).default;
 
   try {
@@ -12,8 +11,17 @@ exports.handler = async function (event, context) {
       body: JSON.stringify({ inputs: "Give me one helpful productivity tip." })
     });
 
-    const data = await response.json();
+    // Check if the response is not OK
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.log("Error response:", errorText); // log the error response
+      return {
+        statusCode: response.status,
+        body: JSON.stringify({ tip: `Error: ${errorText}` })
+      };
+    }
 
+    const data = await response.json();
     if (data && Array.isArray(data) && data[0]?.generated_text) {
       return {
         statusCode: 200,
@@ -32,3 +40,4 @@ exports.handler = async function (event, context) {
     };
   }
 };
+
