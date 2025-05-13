@@ -7,7 +7,7 @@ body {
 }
 
 .app {
-  max-width: 500px;
+  max-width: auto;
   margin: 0;
  background: linear-gradient(#219abe, #34cfba);
   padding: 40px;
@@ -64,7 +64,7 @@ ul {
 li {
   display: flex;
   justify-content: space-between;
-  background: #33333370;
+  background: #423d3d32;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 15px;
