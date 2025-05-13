@@ -7,7 +7,7 @@ body {
 }
 
 .app {
-  max-width: auto;
+  width: max-content;
   margin: 0;
  background: linear-gradient(#219abe, #34cfba);
   padding: 40px;
@@ -41,7 +41,9 @@ input, select, button {
   
   padding: 11px;
   border-radius: 12px;
+  background: #423d3d32;
   border: 1px solid white;
+  
 }
 
 button {
