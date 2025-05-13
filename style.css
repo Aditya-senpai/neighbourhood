@@ -19,7 +19,7 @@ h1 {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 20;
-  font-style: normal;
+  font-style: nortrynhyut54zmal;
   
 }
 
@@ -52,22 +52,71 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #94d298;
 }
 
 ul {
   list-style: none;
   padding: 0;
+  
 }
  
 li {
   display: flex;
   justify-content: space-between;
-  background: #f0f0f0;
+  background: #33333370;
   margin-bottom: 10px;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 15px;
 }
+/* Dark Mode Button Container */
+.dark {
+    position: fixed; /* Fixes the container position */
+    top: 80px; /* Adjust the distance from the top */
+    right: 90px; /* Adjust the distance from the right */
+    z-index: 1000; /* Ensures the button is on top of other content */
+   
+}
+
+/* Dark Mode Button Styling */
+.dark button {
+    padding: 10px 20px; /* Adjust padding for button size */
+    background-color: #373333; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Removes the border */
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer; /* Adds a pointer cursor on hover */
+    font-size: 16px; /* Adjust font size */
+    border-color: #ba9393;                                          
+}
+
+.dark button:hover {
+    background-color: #555; /* Button hover effect */
+}
+
+
+
+
+/* Dark Mode Styles */
+:root {
+    --bg-color-light: #ffffff;
+    --text-color-light: #000000;
+    --bg-color-dark: #121212;
+    --text-color-dark: #e0e0e0;
+}
+
+/* Default Light Mode */
+body {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
 
 .done {
   text-decoration: line-through;

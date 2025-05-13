@@ -68,6 +68,15 @@ async function getTip(index) {
     alert('❌ Failed to get AI tip.');
   }
 }
+// Function to toggle dark mode
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
+// Optional: Automatically apply dark mode if the user has it set in their system preferences
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.add('dark-mode');
+}
 
 taskForm.addEventListener("submit", addTask);
 filterSelect.addEventListener("change", renderTasks);
