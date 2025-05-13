@@ -7,7 +7,7 @@ body {
 }
 
 .app {
-  width: max-content;
+  width: 1000px;
   margin: 0;
  background: linear-gradient(#219abe, #34cfba);
   padding: 40px;
