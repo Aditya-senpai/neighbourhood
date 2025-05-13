@@ -5,15 +5,16 @@ exports.handler = async function (event, context) {
     inputs: "Give me a motivational tip for the day"
   };
 
-  const options = {
-    hostname: 'api-inference.huggingface.co',
-    path: '/models/google/flan-t5-small',
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${process.env.HUGGINGFACE_API_KEY}`,
-      'Content-Type': 'application/json'
-    }
-  };
+const options = {
+  hostname: 'api-inference.huggingface.co',
+  path: '/models/tiiuae/falcon-7b-instruct',
+  method: 'POST',
+  headers: {
+    'Authorization': `Bearer ${process.env.HUGGINGFACE_API_KEY}`,
+    'Content-Type': 'application/json'
+  }
+};
+
 
   return new Promise((resolve, reject) => {
     const req = https.request(options, res => {
