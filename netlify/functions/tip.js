@@ -1,37 +1,49 @@
-const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+const https = require('https');
 
-exports.handler = async function () {
-  const HUGGINGFACE_API_KEY = process.env.HUGGINGFACE_API_KEY;
+exports.handler = async function (event, context) {
+  const data = {
+    inputs: "Give me a motivational tip for the day"
+  };
 
-  try {
-    const response = await fetch("https://api-inference.huggingface.co/models/google/flan-t5-small", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${HUGGINGFACE_API_KEY}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        inputs: "Give a helpful productivity tip."
-      }),
+  const options = {
+    hostname: 'api-inference.huggingface.co',
+    path: '/models/google/flan-t5-small',
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${process.env.HUGGINGFACE_API_KEY}`,
+      'Content-Type': 'application/json'
+    }
+  };
+
+  return new Promise((resolve, reject) => {
+    const req = https.request(options, res => {
+      let body = '';
+      res.on('data', chunk => body += chunk);
+      res.on('end', () => {
+        try {
+          const result = JSON.parse(body);
+          const tip = result[0]?.generated_text || "No tip available.";
+          resolve({
+            statusCode: 200,
+            body: JSON.stringify({ tip })
+          });
+        } catch (e) {
+          resolve({
+            statusCode: 500,
+            body: JSON.stringify({ tip: "Error: " + body })
+          });
+        }
+      });
     });
 
-    if (!response.ok) {
-      throw new Error(await response.text());
-    }
+    req.on('error', error => {
+      resolve({
+        statusCode: 500,
+        body: JSON.stringify({ tip: "Request failed: " + error.message })
+      });
+    });
 
-    const data = await response.json();
-    const tip = data[0]?.generated_text || "No tip generated.";
-
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ tip }),
-    };
-  } catch (error) {
-    console.error("Error fetching tip from Hugging Face:", error.message);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ tip: `Error: ${error.message}` }),
-    };
-  }
+    req.write(JSON.stringify(data));
+    req.end();
+  });
 };
-
