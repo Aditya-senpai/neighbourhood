@@ -1,2 +1,2 @@
-so i havechanged my readme to avoid conflicts
-be happy
+Hi! Aditya Shaaw, a highschool student.
+I have made this 
