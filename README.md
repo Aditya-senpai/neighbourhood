@@ -1,6 +1,6 @@
-# TaskinAI
+# About me
 
-Hi there! I’m **Aditya Shaaw**, a high school student and a curious beginner in the world of web development. I'm currently on a journey to learn and build cool things — and this project is part of my **"100 hours of coding"** challenge!
+Hi there! I’m **Aditya Shaw**, a high school student and a curious beginner in the world of web development. I'm currently on a journey to learn and build cool things — and this project is part of my **"100 hours of coding"** challenge!
 
 
 ## What is TaskinAI?
@@ -10,7 +10,7 @@ Hi there! I’m **Aditya Shaaw**, a high school student and a curious beginner i
 This app is perfect for anyone who wants to stay organized with a clean and interactive task manager.
 
 
-## ✨ Features
+## Features ✨
 
 -  **To-Do List**: Add tasks, mark them as done, and remove them when complete.
 -  **Task Categories**: Organize tasks into groups like School, Work, or Personal.
@@ -19,16 +19,17 @@ This app is perfect for anyone who wants to stay organized with a clean and inte
 -  **AI Tip Integration (coming soon)**: A feature to generate helpful productivity tips using AI.
 
 
-##  Built With Help Of
+## Built With Help Of
 
 - **HTML**
 - **CSS**
 - **JavaScript**
+- **AI** (for help)
 - **Netlify** (for deployment)
 - **(coming soon)** Google Gemini 1.5 Flash 
 
 
-##  What I’m Learning
+## What I’m Learning
 
 - Working with forms and user input
 - Using APIs (and handling errors)
@@ -37,13 +38,18 @@ This app is perfect for anyone who wants to stay organized with a clean and inte
 - Securing API keys with environment variables
 
 
-## 💬 Connect with Me
+## Connect with Me
 
 If you're also learning or want to collaborate, feel free to reach out!
 My email id: adityashaw.op@gmail.com
 
 
-## ✅ Final Note
+## Final Note
 
 Thanks for checking out **TaskinAI**. I'm just getting started, and there’s a lot more to come. Feedback, suggestions, and contributions are always welcome!
 
+boot strap
+material ui
+responsive
+gemini 2.0 flash 
+look for to do list samples online
