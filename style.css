@@ -74,22 +74,22 @@ li {
 }
 /* Dark Mode Button Container */
 .dark {
-    position: fixed; /* Fixes the container position */
-    top: 80px; /* Adjust the distance from the top */
-    right: 90px; /* Adjust the distance from the right */
+    position: fixed; /* container position */
+    top: 80px; /* distance from the top */
+    right: 90px; /* distance from the right */
     z-index: 1000; /* Ensures the button is on top of other content */
    
 }
 
 /* Dark Mode Button Styling */
 .dark button {
-    padding: 10px 20px; /* Adjust padding for button size */
+    padding: 10px 20px; /*padding for button size */
     background-color: #373333; /* Button background color */
     color: white; /* Button text color */
-    border: none; /* Removes the border */
+    border: none; /* Removes border */
     border-radius: 50px; /* Rounded corners */
     cursor: pointer; /* Adds a pointer cursor on hover */
-    font-size: 16px; /* Adjust font size */
+    font-size: 16px; /*  font size */
     border-color: #dedcdcd6;                                          
 }
 
