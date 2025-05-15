@@ -8,6 +8,7 @@ body {
 
 .app {
   width: 1350px;
+  ;
   margin: 0;
  background: linear-gradient(#219abe, #34cfba);
   padding: 40px;
@@ -32,7 +33,7 @@ img {
 
 form {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   margin-bottom: 30px;
   
 }
@@ -89,7 +90,7 @@ li {
     border-radius: 50px; /* Rounded corners */
     cursor: pointer; /* Adds a pointer cursor on hover */
     font-size: 16px; /* Adjust font size */
-    border-color: #ba9393;                                          
+    border-color: #dedcdcd6;                                          
 }
 
 .dark button:hover {
@@ -101,9 +102,9 @@ li {
 
 /* Dark Mode Styles */
 :root {
-    --bg-color-light: #ffffff;
+    --bg-color-light: rgb(188, 199, 161);
     --text-color-light: #000000;
-    --bg-color-dark: #121212;
+    --bg-color-dark: #111827;
     --text-color-dark: #e0e0e0;
 }
 
