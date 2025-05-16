@@ -26,7 +26,7 @@ This app is perfect for anyone who wants to stay organized with a clean and inte
 - **JavaScript**
 - **AI** (for help)
 - **Netlify** (for deployment)
-- **(coming soon)** Google Gemini 1.5 Flash 
+- **(coming soon)** Google Gemini 2.0 Flash 
 
 
 ## What I’m Learning
