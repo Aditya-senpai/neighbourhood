@@ -1,7 +1,7 @@
 body {
   font-family: sans-serif;
   background-color: rgb(163, 229, 231);
- 
+
   margin: 0;
   padding: 50px;
 }
@@ -23,19 +23,19 @@ h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 20;
   font-style: nortrynhyut54zmal;
-   letter-spacing: 8px;
-    font-size: 100px;
-     text-shadow: 5px 2px 350px rgb(0, 0, 0);
-  
+  letter-spacing: 8px;
+  font-size: 100px;
+  text-shadow: 5px 2px 350px rgb(0, 0, 0);
+
 }
 
 img {
 
-  clip-path: circle(50%); 
-  width: 90px;
+  clip-path: circle(50%);
+  width: 90x;
   height: 90px;
   /* margin-top: 60px; */
- 
+
 }
 
 form {
@@ -46,13 +46,15 @@ form {
 
 }
 
-input, select, button {
-  
+input,
+select,
+button {
+
   padding: 11px;
   border-radius: 12px;
   background: #423d3d32;
   border: 1px solid white;
-  
+
 }
 
 button {
@@ -69,9 +71,9 @@ button:hover {
 ul {
   list-style: none;
   padding: 0;
-  
+
 }
- 
+
 li {
   display: flex;
   justify-content: space-between;
@@ -80,29 +82,30 @@ li {
   padding: 10px;
   border-radius: 15px;
 }
+
 /* Dark Mode Button Container */
 .dark {
-    position: fixed; 
-    top: 80px; 
-    right: 90px; 
-    z-index: 1000; 
-   
+  position: fixed;
+  top: 80px;
+  right: 90px;
+  z-index: 1000;
+
 }
 
 /* Dark Mode Button Styling */
 .dark button {
-    padding: 10px 20px; 
-    background-color: #373333; 
-    color: white;
-    border: none; 
-    border-radius: 50px; 
-    cursor: pointer; 
-    font-size: 16px; 
-    border-color: #dedcdcd6;                                          
+  padding: 10px 20px;
+  background-color: #373333;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  border-color: #dedcdcd6;
 }
 
 .dark button:hover {
-    background-color: #555; 
+  background-color: #555;
 }
 
 
@@ -110,22 +113,22 @@ li {
 
 /* Dark Mode Styles */
 :root {
-    --bg-color-light: rgb(188, 199, 161);
-    --text-color-light: #000000;
-    --bg-color-dark: #111827;
-    --text-color-dark: #e0e0e0;
+  --bg-color-light: rgb(188, 199, 161);
+  --text-color-light: #000000;
+  --bg-color-dark: #111827;
+  --text-color-dark: #e0e0e0;
 }
 
 /* Default Light Mode */
 body {
-    background-color: var(--bg-color-light);
-    color: var(--text-color-light);
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
 }
 
 /* Dark Mode Styles */
 body.dark-mode {
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-dark);
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
 }
 
 
@@ -133,6 +136,7 @@ body.dark-mode {
   text-decoration: line-through;
   opacity: 0.6;
 }
+
 /* RESPONSIVE hehehe */
 .app {
   width: 100%;
@@ -141,17 +145,21 @@ body.dark-mode {
 }
 
 form {
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
+
 @media (max-width: 600px) {
   form {
     flex-direction: column;
     gap: 15px;
   }
 
-  input, select, button {
+  input,
+  select,
+  button {
     width: 100%;
   }
+
   li {
     flex-direction: column;
     gap: 10px;
