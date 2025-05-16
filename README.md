@@ -1,4 +1,4 @@
-# About me
+# TaskinAI
 
 Hi there! I’m **Aditya Shaw**, a high school student and a curious beginner in the world of web development. I'm currently on a journey to learn and build cool things — and this project is part of my **"100 hours of coding"** challenge!
 
@@ -41,16 +41,17 @@ This app is perfect for anyone who wants to stay organized with a clean and inte
 ## Connect with Me
 
 If you're also learning or want to collaborate, feel free to reach out!
-My email id: adityashaw.op@gmail.com
+- My email id: adityashaw.op@gmail.com
 
 
 ## Final Note
 
 Thanks for checking out **TaskinAI**. I'm just getting started, and there’s a lot more to come. Feedback, suggestions, and contributions are always welcome!
 
+
 boot strap
 material ui
 responsive
 gemini 2.0 flash 
 look for to do list samples online
-
+mf  hf
