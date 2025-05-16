@@ -25,15 +25,16 @@ h1 {
   font-style: nortrynhyut54zmal;
    letter-spacing: 8px;
     font-size: 100px;
-     text-shadow: 5px 2px 50px rgb(0, 0, 0);
+     text-shadow: 5px 2px 350px rgb(0, 0, 0);
   
 }
 
 img {
 
   clip-path: circle(50%); 
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
+  /* margin-top: 60px; */
  
 }
 
