@@ -7,14 +7,16 @@ body {
 }
 
 .app {
-  width: 1350px;
-  ;
+
+  width: 100%;
+  max-width: 900px;
   margin: 0;
- background: linear-gradient(#219abe, #34cfba);
+  background: linear-gradient(#219abe, #34cfba);
   padding: 40px;
   border-radius: 52px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.451);
 }
+
 
 h1 {
   text-align: center;
@@ -25,6 +27,7 @@ h1 {
 }
 
 img {
+
   clip-path: circle(50%); 
   width: 70px;
   height: 70px;
@@ -32,10 +35,11 @@ img {
 }
 
 form {
+
   display: flex;
   gap: 40px;
   margin-bottom: 30px;
-  
+
 }
 
 input, select, button {
@@ -74,27 +78,27 @@ li {
 }
 /* Dark Mode Button Container */
 .dark {
-    position: fixed; /* container position */
-    top: 80px; /* distance from the top */
-    right: 90px; /* distance from the right */
-    z-index: 1000; /* Ensures the button is on top of other content */
+    position: fixed; 
+    top: 80px; 
+    right: 90px; 
+    z-index: 1000; 
    
 }
 
 /* Dark Mode Button Styling */
 .dark button {
-    padding: 10px 20px; /*padding for button size */
-    background-color: #373333; /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* Removes border */
-    border-radius: 50px; /* Rounded corners */
-    cursor: pointer; /* Adds a pointer cursor on hover */
-    font-size: 16px; /*  font size */
+    padding: 10px 20px; 
+    background-color: #373333; 
+    color: white;
+    border: none; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    font-size: 16px; 
     border-color: #dedcdcd6;                                          
 }
 
 .dark button:hover {
-    background-color: #555; /* Button hover effect */
+    background-color: #555; 
 }
 
 
@@ -124,4 +128,33 @@ body.dark-mode {
 .done {
   text-decoration: line-through;
   opacity: 0.6;
+}
+/* RESPONSIVE hehehe */
+.app {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+form {
+  flex-wrap:wrap;
+}
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  input, select, button {
+    width: 100%;
+  }
+  li {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dark {
+    top: 20px;
+    right: 20px;
+  }
 }
